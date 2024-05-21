@@ -13,7 +13,7 @@ redis_port = 11068
 redis_password = 'n8rNyzV1BBbA00Ki4kK92poJXxbSuOB5'
 
 @app.post("/receive_data/{patient_id}/{patient_data}")
-async def receive_data(patient_data: int, patient_id: int):
+async def receive_data(patient_id: int, patient_data: int):
     try:
         # Connect to Redis Cloud
         r = redis.StrictRedis(
