@@ -45,7 +45,7 @@ async def get_data(patient_id: int):
         if data:
             # Decode the byte strings and convert them to dictionaries
             decoded_data = [eval(item.decode()) for item in data]
-            return decoded_data
+            return {"harte_rate":decoded_data}
         else:
             raise HTTPException(status_code=404, detail="No data found for the patient")
 
